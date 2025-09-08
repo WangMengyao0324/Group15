@@ -29,6 +29,17 @@ int main(){
 				cout << "Player 2: ";
 			cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
 			cin >> i >> j;
+
+			while(i < 0 || i > 2){
+				cout << "Wrong position of i!" << endl << "Re-input i:"" << endl;
+				cin >> i;
+			}
+			while(j < 0 || j > 2){
+				cout << "Wrong position of j!" << endl << "Re-input j:" << endl;
+				cin >> j;
+			}
+		
+		
 			if (turn == false)
 			   game[i][j] = 'X';
 			else 
