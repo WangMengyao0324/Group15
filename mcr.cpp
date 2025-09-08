@@ -35,7 +35,7 @@ int main(){
 			//cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
 			cout << "Which cell to mark? i:[0..2], j:[0..2]: ";
 			cin >> i >> j;
-
+"""
 			while(i < 0 || i > 2){
 				cout << "Wrong position of i!" << endl << "Re-input i:"" << endl;
 				cin >> i;
@@ -44,8 +44,12 @@ int main(){
 				cout << "Wrong position of j!" << endl << "Re-input j:" << endl;
 				cin >> j;
 			}
-		
-		
+"""			
+			while(true){
+				if(i>= 0 && i <=2 && j>=0 && j <= 2 && game[i][j] != ' ') break;
+				cout << "Invalid input!" << "\n" << "Re-input i and j:" << endl;
+				cin >> i >> j;
+			}
 			if (turn == false)
 			   game[i][j] = 'X';
 			else 
@@ -55,7 +59,7 @@ int main(){
 				break; // need to terminate the problem
 			}
 				//if get the end then tie
-			else if(n == 9) flag = true;
+			else if(n == 8) flag = true;
 		}
 	if (flag == true) // all celles with i=0 to 2 have been inputted above but no winner yet
 		//Wrong
