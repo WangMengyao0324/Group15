@@ -19,6 +19,10 @@ int main(){
 	char game[3][3] = {' '}; // Tic-tac-toe
 	//char player1 = 'X';
 	//char player2 = 'O';
+
+	//add signal to tie
+	bool flag = false;
+	
 	bool turn = true; // false for player 1's turn, true for player 2's turn. Player 1 first.
 	cout << "X = Player 1" << endl << "O = Player 2" << endl;
     for (int n=0; n<9; n++){
@@ -50,8 +54,10 @@ int main(){
 				cout << "Win!" << endl;
 				break; // need to terminate the problem
 			}
+				//if get the end then tie
+			else if(n == 9) flag = true;
 		}
-	if (i==3) // all celles with i=0 to 2 have been inputted above but no winner yet
+	if (flag == true) // all celles with i=0 to 2 have been inputted above but no winner yet
 		//Wrong
 	   cout << "Tie!" << endl;
 
