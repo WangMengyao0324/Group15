@@ -17,8 +17,8 @@ bool isWin(char game[3][3]){
 int main(){
 	int i, j;
 	char game[3][3] = {' '}; // Tic-tac-toe
-	char player1 = 'X';
-	char player2 = 'O';
+	//char player1 = 'X';
+	//char player2 = 'O';
 	bool turn = true; // false for player 1's turn, true for player 2's turn. Player 1 first.
 	cout << "X = Player 1" << endl << "O = Player 2" << endl;
     for (int n=0; n<9; n++){
